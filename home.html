@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <title>Team A - Log in or register account</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: teal;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    h3 {
+      margin: 10px 0 10px 0;
+      font-style: italic;
+    }
+
+    .content-login,
+    .content-description,
+    .content-create-account {
+      background-color: white;
+      color: teal;
+      margin-top: 20px;
+      margin-left: 10%;
+      padding: 30px;
+      width: 500px;
+      border-radius: 25px;
+    }
+
+    /* Design inputs */
+    #input-first-name,
+    #input-second-name,
+    #input-email,
+    #input-password {
+      width: 350px;
+      padding: 15px;
+      border-radius: 25px;
+      border: 1px solid gray;
+      font-size: medium;
+      margin: 20px 0 20px 0;
+      transition: 500ms ease;
+    }
+
+    #input-first-name:hover,
+    #input-second-name:hover,
+    #input-email:hover,
+    #input-password:hover {
+      box-shadow: 1px 1px 5px teal;
+      width: 400px;
+      transition: 500ms ease;
+    }
+
+    #input-first-name::placeholder,
+    #input-second-name::placeholder,
+    #input-email::placeholder,
+    #input-password::placeholder {
+      font-size: medium;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    button {
+      padding: 15px;
+      width: 150px;
+      border-radius: 25px;
+      margin: 5px 0 5px 0;
+      border: none;
+      font-size: medium;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    .btn-login {
+      background-color: rgb(107, 107, 206);
+      color: white;
+      transition: 500ms ease;
+    }
+
+    .btn-login:hover {
+      width: 175px;
+      transition: 500ms ease;
+      box-shadow: 1px 1px 5px teal;
+      background-color: rgb(90, 90, 204);
+      letter-spacing: 2px;
+    }
+
+    .btn-create-account {
+      background-color: teal;
+      color: white;
+      width: 250px;
+      transition: 500ms ease;
+    }
+    .btn-create-account:hover {
+      width: 275px;
+      transition: 500ms ease;
+      box-shadow: 1px 1px 5px teal;
+      background-color: rgb(0, 97, 97);
+      letter-spacing: 2px;
+    }
+    .btn-readmore {
+      background-color: teal;
+      color: white;
+      transition: 500ms ease;
+    }
+    .btn-readmore:hover {
+      width: 175px;
+      transition: 500ms ease;
+      box-shadow: 1px 1px 5px teal;
+      background-color: rgb(0, 97, 97);
+      letter-spacing: 2px;
+    }
+
+    /* Solid border */
+    hr.solid {
+      border-top: 3px solid teal;
+      margin: 25px 0 25px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: teal;
+      transition: 500ms ease;
+    }
+
+    a:hover {
+      letter-spacing: 1px;
+      transition: 500ms ease;
+      text-decoration: underline;
+      color: black;
+    }
+
+    p {
+      margin: 5px 0 5px 0;
+    }
+  </style>
+  <body>
+    <div class="content-login">
+      <img src="img/logo1.png" a href="#" alt="logo" style="width: 30%" />
+      <h1>Welcome to Team A</h1>
+
+      <div class="login">
+        <form action=""></form>
+        <input
+          type="email"
+          name=""
+          placeholder="Email or Phonenumber"
+          id="input-email"
+        />
+
+        <form action=""></form>
+        <input type="password" placeholder="Password" id="input-password" />
+      </div>
+      <button class="btn-login" type="submit" onclick="">Log in</button>
+
+      <p><a href="#">Forgot password?</a></p>
+
+      <hr class="solid" />
+      <button class="btn-create-account" onclick="">Create Account</button>
+    </div>
+    <div class="content-description">
+      <img src="img/logo1.png" a href="#" alt="logo" style="width: 30%" />
+      <h1>Why Team A</h1>
+
+      <h3>A great social platform for you and your friends to connect</h3>
+
+      <hr class="solid" />
+      <h3>Share posts, pictures, videos</h3>
+      <hr class="solid" />
+
+      <h3>Create and join events</h3>
+      <hr class="solid" />
+      <button class="btn-readmore">Discover More</button>
+    </div>
+
+    <div class="content-create-account">
+      <div class="create-account">
+        <img src="img/logo1.png" a href="#" alt="logo" style="width: 30%" />
+        <h1>Join The Community</h1>
+        <form action=""></form>
+        <input
+          type="text"
+          name=""
+          placeholder="First Name"
+          id="input-first-name"
+        />
+
+        <form action=""></form>
+        <input
+          type="text"
+          name=""
+          placeholder="Second Name"
+          id="input-second-name"
+        />
+
+        <form action=""></form>
+        <input
+          type="email"
+          name=""
+          placeholder="Email or Phonenumber"
+          id="input-email"
+        />
+
+        <form action=""></form>
+        <input
+          type="password"
+          placeholder="Create Password"
+          id="input-password"
+        />
+
+        <form action="Birthday">Birthday</form>
+
+        <form action="Gender">Gender</form>
+
+        <p>
+          <span><input type="checkbox" /></span> I agree to the terms of
+          services
+        </p>
+      </div>
+      <button class="btn-create-account" type="submit" onclick="">
+        Create Account
+      </button>
+    </div>
+
+    <script>
+      // Function Log in
+      function login()
+
+      // Function Create Account
+      function createAccount()
+
+      // Function Forgot Password
+      function forgotPassword()
+    </script>
+  </body>
+</html>
