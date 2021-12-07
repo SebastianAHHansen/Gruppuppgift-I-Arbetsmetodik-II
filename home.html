@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -11,13 +12,17 @@
     <title>Team A - Log in or register account</title>
   </head>
   <style>
+    /* Font Import */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+    /* Overall Design */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
+    /* Design Body */
     body {
       background-color: teal;
       color: white;
@@ -25,11 +30,13 @@
       text-align: center;
     }
 
+    /* Design Headers */
     h3 {
       margin: 10px 0 10px 0;
       font-style: italic;
     }
 
+    /* Design Content */
     .content-login,
     .content-description,
     .content-create-account {
@@ -37,7 +44,7 @@
       color: teal;
       margin-top: 20px;
       margin-left: 10%;
-      padding: 30px;
+      padding: 25px;
       width: 500px;
       border-radius: 25px;
     }
@@ -52,7 +59,7 @@
       border-radius: 25px;
       border: 1px solid gray;
       font-size: medium;
-      margin: 20px 0 20px 0;
+      margin: 5px 0 5px 0;
       transition: 500ms ease;
     }
 
@@ -74,6 +81,7 @@
       letter-spacing: 1px;
     }
 
+    /* Design Buttons */
     button {
       padding: 15px;
       width: 150px;
@@ -105,6 +113,7 @@
       width: 250px;
       transition: 500ms ease;
     }
+
     .btn-create-account:hover {
       width: 275px;
       transition: 500ms ease;
@@ -112,11 +121,13 @@
       background-color: rgb(0, 97, 97);
       letter-spacing: 2px;
     }
+
     .btn-readmore {
       background-color: teal;
       color: white;
       transition: 500ms ease;
     }
+
     .btn-readmore:hover {
       width: 175px;
       transition: 500ms ease;
@@ -127,10 +138,11 @@
 
     /* Solid border */
     hr.solid {
-      border-top: 3px solid teal;
+      border-top: 2px solid teal;
       margin: 25px 0 25px 0;
     }
 
+    /* Design A-tag */
     a {
       text-decoration: none;
       color: teal;
@@ -144,96 +156,220 @@
       color: black;
     }
 
+    /* Design P-tag */
     p {
       margin: 5px 0 5px 0;
     }
+
+    /* Design Checkbox */
+    #checkbox-submit {
+      margin: 15px;
+    }
+
+    /* Design Form */
+    form {
+      margin-top: 10px;
+    }
   </style>
   <body>
-    <div class="content-login">
-      <img src="img/logo1.png" a href="#" alt="logo" style="width: 30%" />
-      <h1>Welcome to Team A</h1>
+    <div class="container">
+      <!-- Content - Login -->
+      <div class="content-login">
+        <img src="img/logo1.png" a href="#" alt="logo" style="width: 30%" />
+        <h1>Welcome to Team A</h1>
 
-      <div class="login">
-        <form action=""></form>
-        <input
-          type="email"
-          name=""
-          placeholder="Email or Phonenumber"
-          id="input-email"
-        />
+        <div class="login">
+          <form action=""></form>
+          <input
+            type="email"
+            name=""
+            placeholder="Email or Phonenumber"
+            id="input-email"
+          />
 
-        <form action=""></form>
-        <input type="password" placeholder="Password" id="input-password" />
+          <form action=""></form>
+          <input type="password" placeholder="Password" id="input-password" />
+        </div>
+        <button class="btn-login" type="submit" onclick="">Log in</button>
+
+        <p><a href="#">Forgot password?</a></p>
+
+        <hr class="solid" />
+        <p>Not a Member yet? It's easy to join Team A!</p>
+        <button class="btn-create-account" onclick="">Create Account</button>
       </div>
-      <button class="btn-login" type="submit" onclick="">Log in</button>
 
-      <p><a href="#">Forgot password?</a></p>
+      <!-- Content - Description -->
+      <div class="content-description">
+        <img src="img/logo1.png" a href="#" alt="logo" style="width: 30%" />
+        <h1>Why People Love Team A</h1>
+        <h3>A great social platform for you and your friends to connect</h3>
 
-      <hr class="solid" />
-      <button class="btn-create-account" onclick="">Create Account</button>
-    </div>
-    <div class="content-description">
-      <img src="img/logo1.png" a href="#" alt="logo" style="width: 30%" />
-      <h1>Why Team A</h1>
+        <div class="description">
+          <hr class="solid" />
+          <h3>Share posts, pictures, videos</h3>
+          <hr class="solid" />
 
-      <h3>A great social platform for you and your friends to connect</h3>
+          <h3>Create and join events</h3>
 
-      <hr class="solid" />
-      <h3>Share posts, pictures, videos</h3>
-      <hr class="solid" />
+          <hr class="solid" />
+          <button class="btn-readmore">Discover More</button>
 
-      <h3>Create and join events</h3>
-      <hr class="solid" />
-      <button class="btn-readmore">Discover More</button>
-    </div>
+          <hr class="solid" />
+          <p>Or just go ahead and</p>
+          <button class="btn-create-account" onclick="">Create Account</button>
+        </div>
+      </div>
 
-    <div class="content-create-account">
-      <div class="create-account">
+      <!-- Content - Create Account -->
+      <div class="content-create-account">
         <img src="img/logo1.png" a href="#" alt="logo" style="width: 30%" />
         <h1>Join The Community</h1>
-        <form action=""></form>
-        <input
-          type="text"
-          name=""
-          placeholder="First Name"
-          id="input-first-name"
-        />
+        <div class="create-account">
+          <!-- Inputs Create Account -->
+          <div class="create-account">
+            <form action="First Name"></form>
+            <input
+              type="text"
+              name=""
+              placeholder="First Name"
+              id="input-first-name"
+            />
 
-        <form action=""></form>
-        <input
-          type="text"
-          name=""
-          placeholder="Second Name"
-          id="input-second-name"
-        />
+            <form action="Second Name"></form>
+            <input
+              type="text"
+              name=""
+              placeholder="Second Name"
+              id="input-second-name"
+            />
 
-        <form action=""></form>
-        <input
-          type="email"
-          name=""
-          placeholder="Email or Phonenumber"
-          id="input-email"
-        />
+            <form action="Email/Phone"></form>
+            <input
+              type="email"
+              name=""
+              placeholder="Email or Phonenumber"
+              id="input-email"
+            />
 
-        <form action=""></form>
-        <input
-          type="password"
-          placeholder="Create Password"
-          id="input-password"
-        />
+            <form action="Password"></form>
+            <input
+              type="password"
+              placeholder="Create Password"
+              id="input-password"
+            />
+          </div>
 
-        <form action="Birthday">Birthday</form>
+          <!-- Birthday -->
+          <div class="submit-birthday">
+            <form action="Birthday">Birthday</form>
+            <select name="day">
+              <option value="day">Day</option>
+              <option value="day">1</option>
+              <option value="day">2</option>
+              <option value="day">3</option>
+              <option value="day">4</option>
+              <option value="day">5</option>
+              <option value="day">6</option>
+              <option value="day">7</option>
+              <option value="day">8</option>
+              <option value="day">9</option>
+              <option value="day">10</option>
+              <option value="day">11</option>
+              <option value="day">12</option>
+              <option value="day">13</option>
+              <option value="day">14</option>
+              <option value="day">15</option>
+              <option value="day">16</option>
+              <option value="day">17</option>
+              <option value="day">18</option>
+              <option value="day">19</option>
+              <option value="day">20</option>
+              <option value="day">21</option>
+              <option value="day">22</option>
+              <option value="day">23</option>
+              <option value="day">24</option>
+              <option value="day">25</option>
+              <option value="day">26</option>
+              <option value="day">27</option>
+              <option value="day">28</option>
+              <option value="day">29</option>
+              <option value="day">30</option>
+              <option value="day">31</option>
+            </select>
+            <select name="month">
+              <option value="month">Month</option>
+              <option value="month">January</option>
+              <option value="month">February</option>
+              <option value="month">March</option>
+              <option value="month">April</option>
+              <option value="month">May</option>
+              <option value="month">June</option>
+              <option value="month">July</option>
+              <option value="month">August</option>
+              <option value="month">September</option>
+              <option value="month">October</option>
+              <option value="month">November</option>
+              <option value="month">December</option>
+            </select>
+            <select name="year">
+              <option value="year">Year</option>
+              <option value="year">2003</option>
+              <option value="year">2002</option>
+              <option value="year">2001</option>
+              <option value="year">2000</option>
+              <option value="year">1999</option>
+              <option value="year">1998</option>
+              <option value="year">1997</option>
+              <option value="year">1996</option>
+              <option value="year">1995</option>
+              <option value="year">1994</option>
+              <option value="year">1993</option>
+              <option value="year">1992</option>
+              <option value="year">1991</option>
+              <option value="year">1990</option>
+              <option value="year">1989</option>
+              <option value="year">1988</option>
+              <option value="year">1987</option>
+              <option value="year">1986</option>
+              <option value="year">1985</option>
+              <option value="year">1984</option>
+              <option value="year">1983</option>
+              <option value="year">1982</option>
+              <option value="year">1981</option>
+              <option value="year">1980</option>
+              <option value="year">1979</option>
+              <option value="year">1978</option>
+              <option value="year">1976</option>
+            </select>
+          </div>
 
-        <form action="Gender">Gender</form>
+          <!-- Checkbox Gender -->
+          <div class="submit-checkbox">
+            <form action="Gender">Gender</form>
+            <span class="checkbox-submit">
+              <input type="checkbox" name="" id="checkbox-submit" />Male</span
+            >
+            <span class="checkbox-submit">
+              <input type="checkbox" name="" id="checkbox-submit" />Female</span
+            >
+            <span class="checkbox-submit">
+              <input type="checkbox" name="" id="checkbox-submit" />Other</span
+            >
+          </div>
 
-        <p>
-          <span><input type="checkbox" /></span> I agree to the terms of
-          services
-        </p>
+          <!-- Checkbox Terms of Services -->
+          <p>
+            <span><input type="checkbox" /></span>
+            <b> I agree to the terms of services </b>
+          </p>
+
+          <!-- Button Create Account -->
+          <button class="btn-create-account" type="submit" onclick="">
+            Create Account
+          </button>
+        </div>
       </div>
-      <button class="btn-create-account" type="submit" onclick="">
-        Create Account
-      </button>
     </div>
 
     <script>
