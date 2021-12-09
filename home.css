@@ -79,7 +79,7 @@ section .container .user .formBx img {
 }
 
 /* Container Content Input fields */
-section .container .user .formBx #username,
+section .container .user .formBx #user,
 section .container .user .formBx #password,
 section .container .user .formBx #fullName,
 section .container .user .formBx #emailAdress,
@@ -102,7 +102,7 @@ section .container .user .formBx #confirmPassword {
 }
 
 /* Container Content Input fields hover */
-section .container .user .formBx #username:hover,
+section .container .user .formBx #user:hover,
 section .container .user .formBx #password:hover,
 section .container .user .formBx #fullName:hover,
 section .container .user .formBx #emailAdress:hover,
@@ -114,7 +114,8 @@ section .container .user .formBx #confirmPassword:hover {
 }
 
 /* Container Content Submit Button */
-section .container .user .formBx #submit {
+section .container .user .formBx #signin,
+section .container .user .formBx #signup {
   background: teal;
   color: #fff;
   width: 150px;
@@ -133,12 +134,12 @@ section .container .user .formBx #submit {
   transition: 500ms ease;
 }
 
-section .container .user .formBx #submit:hover {
-  background: rgb(1, 102, 102);
-  width: 175px;
-  letter-spacing: 2px;
-  box-shadow: 1px 1px 5px teal;
+section .container .user .formBx #signin:hover,
+section .container .user .formBx #signup:hover {
   transition: 500ms ease;
+  box-shadow: 1px 1px 5px teal;
+  background: rgb(1, 102, 102);
+  letter-spacing: 2px;
 }
 
 /* Container Content Text */
@@ -181,9 +182,10 @@ section .container.active .signupBx {
 
 /* Position SignUp Content when not active */
 section .container .signupBx .formBx {
-  top: 100%;
+  /* Shows up From below */
+  /* top: 100%; */
   /* Shows up From above */
-  /* top: -100%;  */
+  top: -100%;
 }
 
 /* Position SignUp Content when active */

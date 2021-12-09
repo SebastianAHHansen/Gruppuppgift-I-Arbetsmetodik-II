@@ -22,10 +22,17 @@
                 alt="logo"
               />
               <h2>Welcome to Team A</h2>
-              <input type="text" placeholder="Username" id="username" />
+
+              <input type="text" placeholder="Email Adress" id="user" />
               <input type="password" placeholder="Password" id="password" />
-              <input type="submit" value="Log in" id="submit" />
-              <p><a href="#">Forgot password?</a></p>
+              <input
+                type="submit"
+                value="Log in"
+                id="signin"
+                onclick="logIn();"
+              />
+              <p><a href="index.html">Forgot password?</a></p>
+
               <hr class="solid" />
               <p class="signup">
                 Don't have any account? <br />
@@ -60,7 +67,12 @@
                 <span><a href="#" target="_blank">terms of services</a></span
                 >.
               </p>
-              <input type="submit" value="Sign up" id="submit" />
+              <input
+                type="submit"
+                value="Sign up"
+                id="signup"
+                onclick="createAccount();"
+              />
               <hr class="solid" />
               <p class="signup">
                 Already have an account?
@@ -78,5 +90,22 @@
         container.classList.toggle('active');
       }
     </script>
+
+    <!-- Script for Create Account -->
+    <script>
+      //Create Account - Collect value from input
+
+      //Create Account - Validate input
+
+      //Create Account - Store value from input
+
+      //Log In -  Call value
+
+      //Log In - Validate input
+
+      //Log In - Load index.html
+    </script>
+
+    <script src="main.js"></script>
   </body>
 </html>
