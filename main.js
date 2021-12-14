@@ -1,95 +1,109 @@
+var account;
+var userAccountString = localStorage.getItem('account');
 
+var userAccountObj = JSON.parse(userAccountString);
+console.log(userAccountObj);
 
-let userAccount = []; // Empty array where inputs pushes into
+function createAccount() {
 
-//Function Create Account
-function createAccount(name, email, password) {
-    var account = {
-        // Collect value from inputs
+    account = {
+        
         name: document.getElementById('fullName').value,
         email: document.getElementById('emailAdress').value,
-        password: document.getElementById('createPassword').value
-        // user: "",
-        // userPassword: "",
-        // loggain: false,
+        password: document.getElementById('createPassword').value        
         
     }
+    
+    
+    window.localStorage.setItem('account', JSON.stringify(account));
+    userAccountString = window.localStorage.getItem('account');
+    userAccountObj = JSON.parse(userAccountString);
 
-        // if (account.user === account.name && account.userPassword === account.password) {
-        //     loggain = true;
-        //}
+    console.log(userAccountObj);
+    
+}
 
-
-
-    // console.log(account);
-    //Pushes in value in array
-
-    userAccount.push(account);
-    // console.log(userAccount);
-
-    //Delete inputs
-    // document.forms[0].reset();
-
-}; 
-
-
-//Sign In Function
 function logIn() {
 
+    console.log(userAccountObj);
+    let tempoArray = [];
+    tempoArray.push(userAccountObj);
 
-    //Validate inputs
-    if () {
-        alert ("Du har skrivit in rätt användaruppgifter! :D")
-        
-
-        //Proceed Login
-    } else {
-        alert ("Wrong username or Password. Try again!");
-
+    // Kollar om du har skapat ett konto 
+    if (tempoArray.length === 0) {
+     alert("Vänligen skapa ett konto.");
     }
 
+     //Om du har det går den vidare
+     else if (tempoArray.length !== 0) {
+
+        let tempoArray = [];
+        tempoArray.push(userAccountObj);
+
+            tempoArray.forEach(element => {
+
+        //Kollar om ditt användarnamn och lösenord stämmer
+        if (document.getElementById("user").value == element.email 
+        && document.getElementById("password").value == element.password) {
+        
+            //Om du gör det får du en alert, följt av att du dirigeras till index-sidan
+        //alert("Du är inloggad. Du kommer nu tas till huvudsidan.");
+            window.location.href = "index.html";
+        alert("Tjena");
+
+            //Om du skrivit fel så får du en alert som berättar detta för dig
+        } else if (document.getElementById("user").value != element.email || null
+        || document.getElementById("password").value != element.password || null) {
+            alert("Du har inte skrivit in rätt uppgifter."); 
+        }
+      });  
+    }
+}
+
+//Onload funktion
+function skrivUt2() {
+
+    //Hämtar ditt kontos uppgifter
+    userAccountString = window.localStorage.getItem('account');
+    userAccountObj = JSON.parse(userAccountString);
+
+    //Du får åtkomst till userAccountObj genom en temporär array eftersom JSON är mer komplicerat
+    var tempoArray = [];
+        tempoArray.push(userAccountObj);
+
+        //Välkomnar dig på nya sidan
+        tempoArray.forEach(element => {
+            document.getElementById("welcome").innerHTML = "Welcome, " + element.name;
+        });
 }
 
 
+// Publicera ett inlägg
+
+// const commentContainer = document.getElementById('allComments');
+//     document.getElementById('addComments').addEventListener('click', function (ev) {
+//     addComment(ev);
+//     });
 
 
-/* const createAccount = {
-    //ev.preventDefault();
-    let account = {
-        // Collect value from inputs
-        name: document.getElementById('fullName').value,
-        email: document.getElementById('emailAdress').value,
-        password: document.getElementById('createPassword').value,
-        
-    }
+//     function addComment(ev) {
+//     let commentText;
+//     const textBox = document.createElement('div');
+    
+    
+//     commentText = document.getElementById('newComment').value;
+//     document.getElementById('newComment').value = '';
+//     textBox.innerHTML = commentText;
+// } 
 
-    console.log(account);
-    //Pushes in value in array
-    userAccount.push(account);
-
-    //Delete inputs
-    document.forms[0].reset();
-}
-
-document.getElementById('signup').addEventListener('click', createAccount()); */
-
-//Function Log in
+//     function setOnLocalStorage () {
+//         localStorage.setItem('template', document.getElementById('allComments').innerHTML);
+//     } 
 
 
-// document.getElementById('submit').addEventListener('click', logIn());
-//         console.log(djur);
-//         allaDjur.push(djur);
-//         document.forms[0].reset();
+// Friends Search Friends
 
-//Buttons
-// signin
-// signup
 
-// //Log in
-// id="username"
-// id="password"
 
-// //Create ACC
-// id="fullName"
-// id="emailAdress"
-// id="createPassword"
+// Function LogOut
+
