@@ -49,7 +49,7 @@ function logIn() {
             //Om du gör det får du en alert, följt av att du dirigeras till index-sidan
         //alert("Du är inloggad. Du kommer nu tas till huvudsidan.");
             window.location.href = "index.html";
-        alert("Tjena");
+        alert("Du har skrivit in rätt uppgifter. Nu loggas du in!");
 
             //Om du skrivit fel så får du en alert som berättar detta för dig
         } else if (document.getElementById("user").value != element.email || null
