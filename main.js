@@ -12,15 +12,13 @@ function createAccount() {
         email: document.getElementById('emailAdress').value,
         password: document.getElementById('createPassword').value        
         
-    }
-    
+    }    
     
     window.localStorage.setItem('account', JSON.stringify(account));
     userAccountString = window.localStorage.getItem('account');
     userAccountObj = JSON.parse(userAccountString);
 
-    console.log(userAccountObj);
-    
+    console.log(userAccountObj);    
 }
 
 function logIn() {
@@ -47,8 +45,9 @@ function logIn() {
         && document.getElementById("password").value == element.password) {
         
             //Om du gör det får du en alert, följt av att du dirigeras till index-sidan
-        //alert("Du är inloggad. Du kommer nu tas till huvudsidan.");
-            window.location.href = "index.html";
+            //Funkar på alla webbläsare om du lägger en setTimeout innan man skickas till index.html
+        setTimeout(function () {window.location.href = "index.html";}, 0);
+
         alert("Du har skrivit in rätt uppgifter. Nu loggas du in!");
 
             //Om du skrivit fel så får du en alert som berättar detta för dig
@@ -77,8 +76,16 @@ function skrivUt2() {
         });
 }
 
+//===================================================================== Log Out Function
+// const handleLogout = () => {
+//     window.localStorage.clear();
+//     window.location.reload(true);
+//     window.location.replace('/');
+//   };
+//==============================================================================================
 
-// Publicera ett inlägg
+
+//================================================================= Publicera ett inlägg
 
 // const commentContainer = document.getElementById('allComments');
 //     document.getElementById('addComments').addEventListener('click', function (ev) {
@@ -99,11 +106,55 @@ function skrivUt2() {
 //     function setOnLocalStorage () {
 //         localStorage.setItem('template', document.getElementById('allComments').innerHTML);
 //     } 
+//=================================================================================================
 
 
-// Friends Search Friends
+//================================================================== Search Friends
+// const listFriends = document.getElementById('allFriends');
+// const searchBar = document.getElementById('searchBar');
+// //Array with all users Friends
+// let allFriends = [
+    
+//     {
+//         "fullName": "",
+//         "email":"",
+//         "phone":"",
+//         "profilePic": ""
+//     },
+// ];
 
+// searchBar.addEventListener('keyup', (e) => {
+//     const searchString = e.target.value.toLowerCase();
 
+//     const filteredFriends = allFriends.filter((friends) => {
+//         return(
+//             friends.fullName.toLowerCase().includes(searchString) || friends.email.toLowerCase().includes(searchString) || friends.phone.toLowerCase().includes(searchString)  ||  friends.profilePic.toLowerCase().includes(searchString)
+//         );
+    
+//     });
+//     displayFriends(filteredFriends);
+// });
 
-// Function LogOut
+// //Display function 
+// const displayFriends=(friends) => {
+//     const htmlString = friends
+//     .map((friends) => {
+//         return`
+//         <div class="card lg-3 my-3 mx-3" style="width: 18rem">
+//           <img class="card-img-top" src="${friends.profilePic}" alt="${friends.profilePic}" />
+//           <div class="card-body">
+//             <h5 class="mt-1">${friends.fullName}</h5>
+//             <h3 class="mt-2">${friends.email}</h3>
+//             <h3 class="mt-1">${friends.phone}</h3>
+//             <a href="#" class="btn bi bi-heart"></a>
+//           </div>
+//         </div>
+//         `;
+//         })
+//         .join('');
+//         friendsList.innerHTML = htmlString;
+// };
+// //Loads all friends
+// displayFriends(allFriends);
+
 

@@ -28,7 +28,7 @@
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     />
 
-    <title>Team A - Gruppuppgift I</title>
+    <title>Homepage</title>
   </head>
 
   <body onload="skrivUt2()">
@@ -173,7 +173,10 @@
               aria-labelledby="dropdownItems"
             >
               <li>
-                <a class="dropdown-item dropdown-item">Settings</a>
+                <a href="#" class="dropdown-item dropdown-item">Settings</a>
+              </li>
+              <li>
+                <a href="home.html" class="dropdown-item dropdown-item">Log out</a>
               </li>
             </ul>
           </div>
@@ -203,8 +206,17 @@
               </a>
               </li>
             </ul>
-          </div>
+
+             <!-- Log Out (Power off) Button -->
+             <!-- <button className="button" onClick={() => handleLogout()}>
+            <a type="button" style="color: white">
+              <i class="navbarIcons fas fa-power-off"></i>
+            </a>
+          </button> -->
+  
+        
         </div>
+        
         <!-- Right elements -->
       </div>
       <!-- Container wrapper -->
@@ -276,12 +288,13 @@
                     <i class="fa fa-mobile fa-lg"></i> - From Mobile - 2 min ago
                   </p>
                 </div>
+              </div>
+            
 
 
                 <!-- Publicera Inlägg -->
                 <div id="allComments">
                 </div>
-
 
 
                 <div class="pad-ver">
@@ -293,11 +306,12 @@
                       ><i class="dislikeBtn fa fa-thumbs-down"></i
                     ></a>
                   </div>
-                  <a class="btn btn-sm btn-default btn-hover-primary" href="#"
+                  <a class="commentBtn btn-sm btn-default btn-hover-primary" href="#"
                     >Comment</a
                   >
                 </div>
                 <hr />
+              </div>
 
                 <!-- Comments -->
                 <div>
@@ -357,7 +371,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+                <!-- </div> xxx -->
             <!--===================================================-->
             <!-- End Newsfeed Content -->
 
@@ -390,7 +404,7 @@
                 />
                 <div class="pad-ver">
                   <span class="tag tag-sm"
-                    ><i class="fa fa-heart text-danger"></i> 250 Likes</span
+                    ><i class="fa fa-heart text-danger"></i> 25 Likes</span
                   >
                   <div class="btn-group">
                     <a class="btn btn-sm btn-default" href="#"

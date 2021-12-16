@@ -45,18 +45,6 @@ h3 {
   background-color: teal;
 }
 
-/* Toggler Navbar  */
-.navbar .container-fluid .navbar-toggler {
-  color: #fff;
-  transition: 500ms ease;
-  border: none;
-  padding: 7px;
-}
-.navbar .container-fluid .navbar-toggler:hover {
-  transition: 500ms ease;
-  color: black;
-}
-
 /* Icons */
 .navbar .icons {
   display: flex;
@@ -117,6 +105,26 @@ h3 {
   background-color: rgb(2, 172, 172);
 }
 
+/* Buttons */
+/* Share Button */
+.btn,
+#addComments {
+  border-radius: 25px;
+  border: 1px solid teal;
+  margin-left: 5px;
+  color: white;
+  background-color: teal;
+  padding: 12px;
+  transition: 500ms ease;
+}
+
+#addComments:hover {
+  background-color: rgb(2, 172, 172);
+
+  transition: 500ms ease;
+}
+
+/* Reaction Buttons */
 .likeBtn,
 .dislikeBtn {
   border-radius: 25px;
@@ -133,9 +141,27 @@ h3 {
   transition: 500ms ease;
 }
 
-.likeBtn::after {
-  color: green;
+/* .shareContentBtn {
+  color: black;
+  padding: 10px;
+  margin: 15px;
+  background-color: white;
+  border: 1px solid teal;
+  border-radius: 35px;
 }
+
+.shareContentBtn:hover {
+  color: black;
+  background-color: rgb(2, 172, 172);
+  border: 1px solid teal;
+  border-radius: 35px;
+} */
+
+/* 
+.btn:hover {
+  background-color: white;
+  border: 1px solid teal;
+} */
 
 .commentBtn {
   border-radius: 25px;
@@ -144,6 +170,21 @@ h3 {
   color: black;
 }
 
+#submitBtn {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: teal;
+  color: #fff;
+  justify-content: center;
+  transition: 500ms ease;
+}
+
+#submitBtn:hover {
+  background: rgb(1, 102, 102);
+  transition: 500ms ease;
+}
+
+/* Dropdowns */
 .dropdown {
   margin-left: 10px;
 }
@@ -165,20 +206,6 @@ h3 {
 
 container-fluid {
   color: #fff;
-}
-
-#submitBtn {
-  padding: 10px;
-  border-radius: 15px;
-  background-color: teal;
-  color: #fff;
-  justify-content: center;
-  transition: 500ms ease;
-}
-
-#submitBtn:hover {
-  background: rgb(1, 102, 102);
-  transition: 500ms ease;
 }
 
 /* Content */
