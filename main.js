@@ -72,8 +72,11 @@ function skrivUt2() {
 
         //Välkomnar dig på nya sidan
         tempoArray.forEach(element => {
-            document.getElementById("welcome").innerHTML = "Welcome, " + element.name;
+            document.getElementById("welcome").innerHTML = "Welcome, " + element.name;        
+            
         });
+        
+
 }
 
 //===================================================================== Log Out Function
@@ -110,51 +113,66 @@ function skrivUt2() {
 
 
 //================================================================== Search Friends
-// const listFriends = document.getElementById('allFriends');
-// const searchBar = document.getElementById('searchBar');
-// //Array with all users Friends
-// let allFriends = [
+const listFriends = document.getElementById('searchResults');
+const searchFriends = document.getElementById('searchFriends');
+//Array with all users Friends
+let allFriends = [
     
-//     {
-//         "fullName": "",
-//         "email":"",
-//         "phone":"",
-//         "profilePic": ""
-//     },
-// ];
+    {
+        "fullName": "Jesper Holmlund",
+        "email":"JHolmlund@kyh.se",
+        "phone":"072828485",
+        "profilePic": "https://bootdey.com/img/Content/avatar/avatar1.png"
+    },
+    {
+        "fullName": "Tove Brandt",
+        "email":"TBrandt@kyh.se",
+        "phone":"0785458548",
+        "profilePic": "https://bootdey.com/img/Content/avatar/avatar3.png"
+    },
+    {
+        "fullName": "Karin Lundqvist",
+        "email":"KLundqvist@kyh.se",
+        "phone":"0724588588",
+        "profilePic": "https://bootdey.com/img/Content/avatar/avatar8.png"
+    },
+    {
+        "fullName": "Sebastian Procheus",
+        "email":"SProcheus@kyh.se",
+        "phone":"072825425",
+        "profilePic": "https://bootdey.com/img/Content/avatar/avatar2.png"
+    }
+];
 
-// searchBar.addEventListener('keyup', (e) => {
-//     const searchString = e.target.value.toLowerCase();
+searchFriends.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
 
-//     const filteredFriends = allFriends.filter((friends) => {
-//         return(
-//             friends.fullName.toLowerCase().includes(searchString) || friends.email.toLowerCase().includes(searchString) || friends.phone.toLowerCase().includes(searchString)  ||  friends.profilePic.toLowerCase().includes(searchString)
-//         );
+    const filteredFriends = allFriends.filter((friend) => {
+        return(
+            friend.fullName.toLowerCase().includes(searchString) || friend.email.toLowerCase().includes(searchString) || friend.phone.toLowerCase().includes(searchString)  ||  friend.profilePic.toLowerCase().includes(searchString)
+        );
     
-//     });
-//     displayFriends(filteredFriends);
-// });
+    });
+    displayFriends(filteredFriends);
+});
 
-// //Display function 
-// const displayFriends=(friends) => {
-//     const htmlString = friends
-//     .map((friends) => {
-//         return`
-//         <div class="card lg-3 my-3 mx-3" style="width: 18rem">
-//           <img class="card-img-top" src="${friends.profilePic}" alt="${friends.profilePic}" />
-//           <div class="card-body">
-//             <h5 class="mt-1">${friends.fullName}</h5>
-//             <h3 class="mt-2">${friends.email}</h3>
-//             <h3 class="mt-1">${friends.phone}</h3>
-//             <a href="#" class="btn bi bi-heart"></a>
-//           </div>
-//         </div>
-//         `;
-//         })
-//         .join('');
-//         friendsList.innerHTML = htmlString;
-// };
-// //Loads all friends
-// displayFriends(allFriends);
+//Display function 
+const displayFriends=(friends) => {
+    const htmlString = friends
+    .map((friend) => {
+        return`
+        <li><a class="list-group-item" >
+        <div class="col-md-4">
+        <img class="card-img-left" src="${friend.profilePic}" alt="${friend.profilePic}" />
+        </div>
+            <h5 class="mt-1">${friend.fullName}</h5>
+        
+        </a></li>
+        `;
+        
+        })
+        .join('');
+        searchResults.innerHTML = htmlString;
+};
 
 
